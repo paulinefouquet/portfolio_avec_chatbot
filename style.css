@@ -7,7 +7,11 @@ body {
 .titre {
     color : rgb(229, 78, 13);
     font-size: 50px ;
+    margin: 10px 200px 10px 50px;
+    border-bottom : dashed;
+    border-width: 10px;
     }
+
 
 .italic {font-style: italic}
 
@@ -17,6 +21,7 @@ body {
     max-width : 100px;
     height: auto;
     border-radius: 20%;
+    margin-left: 30px;
     }
 
 
@@ -25,4 +30,4 @@ body {
         padding: 30px
       }
 
-.github {}
+.xp {padding: 0px 0px 0px 50px}
