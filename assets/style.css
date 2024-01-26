@@ -1,0 +1,57 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace
+    }
+
+.titre {
+    color : rgb(229, 78, 13);
+    font-size: 50px ;
+    margin: 10px 200px 10px 50px;
+    border-bottom : dashed;
+    border-width: 10px;
+    }
+
+.italic {font-style: italic}
+
+.habitation {color: lightpink}
+
+.icone {
+    max-width : 100px;
+    height: auto;
+    border-radius: 20%;
+}
+
+a:hover{   -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);}
+
+.maphoto {
+    max-width : 100px;
+    height: auto;
+    border-radius: 20%;
+    margin-left: 30px;
+    }
+
+
+.topbox {justify-content: center;
+        display: flex;
+        padding: 30px
+      }
+
+.xp {padding: 0px 0px 0px 50px}
+
+header, footer{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+    border-bottom: solid white;
+    margin: 5px;
+    padding: 5px;
+}
+
+header > div {
+    height: 50px;
+}
