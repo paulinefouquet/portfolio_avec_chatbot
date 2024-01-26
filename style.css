@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace
+    }
+
+.titre {
+    color : rgb(229, 78, 13);
+    font-size: 50px ;
+    }
+
+.italic {font-style: italic}
+
+.habitation {color: lightpink}
+
+.maphoto {
+    max-width : 100px;
+    height: auto;
+    border-radius: 20%;
+    }
+
+
+.topbox {justify-content: center;
+        display: flex;
+        padding: 30px
+      }
+
+.github {}
