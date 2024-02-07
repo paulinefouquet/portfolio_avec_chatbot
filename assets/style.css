@@ -7,7 +7,7 @@ body {
 a {color: white;}
 
 .titre {
-    color : rgb(229, 78, 13);
+    color : rgb(13, 229, 81);
     font-size: 50px ;
     margin: 10px 200px 10px 50px;
     border-bottom : dashed;
@@ -60,7 +60,7 @@ header > div {
 
 
 
-.user-message {
+/* .user-message {
     background-color: #e0f7fa;
     padding: 5px;
     border-radius: 5px;
@@ -78,7 +78,7 @@ input[type="text"] {
     width: 80%;
     padding: 5px;
     margin-right: 5px;
-}
+} */
 
 button {
     padding: 5px;
@@ -100,14 +100,14 @@ button {
     margin: auto;
     }
 
-.chat-msg {border: 5px solid}
+.chat-msg {border: 5px solid;
+    background-color: white;
+    color: black;}
 
 .chat-question {
     border: 1px solid green;
-
     text-align : left;
-    align-self: flex-end;
-    
+    align-self: flex-end;    
 }
 
 .chat-reponse {
