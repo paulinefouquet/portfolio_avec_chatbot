@@ -8,8 +8,9 @@ https://docs.edenai.co/reference/start-your-ai-journey-with-edenai
 
 ### Demarrer le portfolio sur serveur specifique
 
-Pour éviter les problemes de CORS : démarrer le portfolio depuis un port spécifique
+Pour éviter les problemes de CORS : démarrer le portfolio depuis un port spécifique 8001
 Pour cela se placer dans le dossier contenant le portfolio et lancer la commande:
 ```
 python -m http.server 8001
 ```
+Ensuite acceder au portfolio depuis le navigateur par http://localhost:8001/Portfolio.html

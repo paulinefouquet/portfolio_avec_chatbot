@@ -24,15 +24,16 @@ app.add_middleware(
     allow_headers=["*"],  # You can restrict this to specific headers if needed
 )
 
-
 #Pour tester l'API
 @app.get("/test/{prompt}", description="Test!")
 def test():
     return "yo"
 
+#Pour alimenter le chatbot avec les données du portfolio:
 response = requests.get('http://localhost:8001/Portfolio.html')
 soup = BeautifulSoup(response.text, 'html.parser')
 
+#pour se connecter à l'API
 @app.post("/chat/", description = 'output du chatbot')
 async def chat(prompt):
     payload = {
