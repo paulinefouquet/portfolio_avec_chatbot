@@ -1,5 +1,3 @@
-const apiUrl = "http://127.0.0.1:8000/test/";
-
 function addNewQuestion() {
     let prompt = window.prompt("Quelle est ta question?")
     let chatBoxEl = document.getElementById("chat-add");

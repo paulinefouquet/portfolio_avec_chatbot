@@ -1,8 +1,9 @@
 import json
 import requests
 
+from edenkey import EDENAI_KEY
 
-headers = {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzg2YmQ4MTktNmUwNS00OGUyLWI4YjItY2YwZjgyZWFiYmQ4IiwidHlwZSI6ImFwaV90b2tlbiJ9.Ls29O1PI0yDaiiP2aGM0GYziko79nUG8_d33BrBCrkI"}
+headers = {"Authorization": EDENAI_KEY}
 url = "https://api.edenai.run/v2/text/chat"
 provider = 'meta'
 
