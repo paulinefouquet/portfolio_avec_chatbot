@@ -1,15 +1,19 @@
+import uvicorn
+from fastapi import FastAPI
 import json
 import requests
-import uvicorn
 from bs4 import BeautifulSoup
-from fastapi import FastAPI
+
 from edenkey import EDENAI_KEY
+
+PORT = 8000 #port utiliser par uvicorn
 
 #Pour que le chatbot fonctionne : il faut saisir une key de l'API EdenAI
 headers = {"Authorization": EDENAI_KEY}
 url = "https://api.edenai.run/v2/text/chat"
 provider = 'openai'
 
+print(EDENAI_KEY)
 
 app = FastAPI()
 
@@ -30,7 +34,7 @@ def test():
     return "yo"
 
 #Pour alimenter le chatbot avec les données du portfolio:
-response = requests.get('http://localhost:8001/Portfolio.html')
+response = requests.get('http://localhost:8001/index.html')
 soup = BeautifulSoup(response.text, 'html.parser')
 
 #pour se connecter à l'API
@@ -46,10 +50,13 @@ async def chat(prompt):
         "fallback_providers": ""
     }
     payload["text"] = prompt
-
+    
     response = requests.post(url, json=payload, headers=headers)
-    result = json.loads(response.text)[provider]
+    
+    print(f"la question suivante a été posée: {prompt}")
 
+    result = json.loads(response.text)[provider]
+    print(f"le texte suivant a été généré: {result['generated_text']}")
     return result['generated_text']
 
-uvicorn.run(app)
+uvicorn.run(app, port=PORT)
